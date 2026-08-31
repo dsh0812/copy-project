@@ -1,0 +1,38 @@
+# Local environments
+.venv/
+venv/
+.env
+.env.*
+
+# Python and notebook caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# macOS and editor files
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Claude local machine permissions
+.claude/settings.local.json
+
+# LaTeX intermediate files
+paper/*.aux
+paper/*.bbl
+paper/*.bcf
+paper/*.blg
+paper/*.fdb_latexmk
+paper/*.fls
+paper/*.log
+paper/*.out
+paper/*.run.xml
+paper/*.synctex.gz
+paper/*.toc
+paper/*.xdv
+
+# Temporary files
+*.tmp
+*.bak
+*~

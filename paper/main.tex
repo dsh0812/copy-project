@@ -1,0 +1,69 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\title{Digital Transformation and Firm Productivity: A Synthetic Workflow Demo}
+\author{Economics Research Workflow Workshop}
+\date{2026-06-06}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This short draft demonstrates how a VS Code centered workflow can connect simulated firm-level data, Stata DID estimation, Matlab theory calibration, Jupyter notebooks, and formal \LaTeX{} writing. The data are synthetic and should not be interpreted as evidence about real firms or policies.
+\end{abstract}
+
+\section{Research Question}
+
+Digital transformation may raise firm productivity by improving information flows, production scheduling, inventory control, and managerial decision-making. The empirical question in this demo is whether firms that adopt digital technologies experience higher total factor productivity after adoption, relative to comparable firms that have not yet adopted.
+
+\section{Empirical Specification}
+
+The synthetic panel follows firms from 2016 to 2024. Treated firms adopt digital technologies beginning in 2020. The baseline DID specification is
+
+\begin{equation}
+\log(TFP_{it}) = \alpha_i + \lambda_t + \tau Digital_{it} + X_{it}'\beta + \varepsilon_{it},
+\end{equation}
+
+where $\alpha_i$ denotes firm fixed effects, $\lambda_t$ denotes year fixed effects, and $X_{it}$ includes capital intensity, export share, and ownership controls. Standard errors are clustered at the firm level.
+
+\section{Identification Checks}
+
+The workflow produces a pre-treatment parallel-trend figure and a placebo test that assigns a fake treatment date in the pre-period. These diagnostics are not proof of identification, but they are useful first checks before interpreting the DID coefficient.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.78\textwidth]{../output/digital_parallel_trends.png}
+\caption{Parallel-trend check in synthetic firm panel data.}
+\label{fig:parallel-trends}
+\end{figure}
+
+\section{A Simple Theory Channel}
+
+The Matlab component formalizes a compact mechanism. A firm chooses digital intensity $x$ and obtains productivity gain
+
+\begin{equation}
+g(x, m) = \phi x + \lambda m x - \frac{1}{2}\psi x^2 - c,
+\end{equation}
+
+where $m$ is managerial capability, $\phi$ is the baseline productivity return to digital adoption, $\psi$ captures convex implementation costs, and $c$ is a fixed adoption cost. The script calibrates $\phi$ so that the model-implied average gain is close to the simulated DID estimate.
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.78\textwidth]{../output/matlab_theory_model.png}
+\caption{Model-implied productivity gain by managerial capability.}
+\label{fig:theory-model}
+\end{figure}
+
+\section{Draft Result Summary}
+
+In the synthetic data, digital transformation is associated with higher log productivity after adoption. The event-study output is designed to show small pre-treatment differences and growing post-adoption gains. The placebo test checks whether a fake pre-period treatment generates a similar effect. Because all data are simulated, the estimate should be read only as a workflow demonstration, not as a substantive claim about real-world digital transformation.
+
+\section{Reproducibility Note}
+
+The analysis is generated from three executable components: a Python data-generation script, a Stata DID script, and a Matlab theory-calibration script. The Jupyter notebooks provide interactive debugging surfaces, while this \LaTeX{} file records the formal writing layer.
+
+\end{document}

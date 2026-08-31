@@ -1,0 +1,35 @@
+{
+  "permissions": {
+    "allow": [
+      "Read",
+      "Grep",
+      "Glob",
+      "Edit(quality_reports/**)",
+      "Write(quality_reports/**)",
+      "WebFetch(domain:api.crossref.org)",
+      "WebFetch(domain:crossref.org)",
+      "WebFetch(domain:scholar.cnki.net)",
+      "WebFetch(domain:kns.cnki.net)",
+      "WebFetch(domain:www.cnki.net)",
+      "WebFetch(domain:www.nber.org)",
+      "Bash(ls:*)",
+      "Bash(find:*)",
+      "Bash(rg:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(wc:*)",
+      "Bash(pdftotext:*)"
+    ],
+    "ask": [
+      "WebFetch"
+    ],
+    "deny": [
+      "Edit(paper/**)",
+      "Write(paper/**)",
+      "Edit(data/**)",
+      "Write(data/**)",
+      "Bash(rm:*)",
+      "Bash(git push:*)"
+    ]
+  }
+}

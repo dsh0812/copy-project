@@ -1,0 +1,11 @@
+{
+  "files.associations": {
+    "*.do": "stata",
+    "*.m": "matlab",
+    "*.qmd": "quarto"
+  },
+  "python.terminal.activateEnvironment": true,
+  "jupyter.notebookFileRoot": "${workspaceFolder}",
+  "latex-workshop.latex.outDir": "%DIR%",
+  "latex-workshop.view.pdf.viewer": "tab"
+}
