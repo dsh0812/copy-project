@@ -1,0 +1,9 @@
+D:\Vsproject\homework\copy-project\.venv\Lib\site-packages\statsmodels\regression\linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+D:\Vsproject\homework\copy-project\.venv\Lib\site-packages\statsmodels\regression\linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+D:\Vsproject\homework\copy-project\.venv\Lib\site-packages\statsmodels\regression\linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+D:\Vsproject\homework\copy-project\.venv\Lib\site-packages\statsmodels\regression\linear_model.py:2121: RuntimeWarning: invalid value encountered in sqrt
+  return np.sqrt(np.diag(self.cov_params()))
+Generated D:\Vsproject\homework\copy-project\prompts\robustness/*.md and D:\Vsproject\homework\copy-project\output\robustness_summary.md
